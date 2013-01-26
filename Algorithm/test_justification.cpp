@@ -30,10 +30,10 @@ public:
                         line.append(words[pos]);
                         line.append(spaces, ' ');
                     } else {
-                        int insert_spaces = (spaces + (line_end-pos+1))/(line_end-pos);
+                        int insert_spaces = (spaces + (line_end-pos-1))/(line_end-pos);
                         spaces -= insert_spaces;
-                        line.append(insert_spaces, ' ');
                         line.append(words[pos]);
+                        line.append(insert_spaces, ' ');
                     }
                 }
                 result.push_back(line);
@@ -60,3 +60,15 @@ public:
         return result;
     }
 };
+
+void test_text_justification() {
+    vector<string> input;
+    input.push_back(string("a"));
+    input.push_back("b");
+    input.push_back("c");
+    input.push_back("d");
+    input.push_back("e");
+    
+    Solution s;
+    s.fullJustify(input, 3);
+}
