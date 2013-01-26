@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "bellmanford(std::vector&lt;std::vector&lt;std::pair&lt;unsigned int, int&gt;, std::allocator&lt;std::pair&lt;unsigned int, int&gt; &gt; &gt;, std::allocator&lt;std::vector&lt;std::pair&lt;unsigned int, int&gt;, std::allocator&lt;std::pair&lt;unsigned int, int&gt; &gt; &gt; &gt; &gt;&amp;):shortest_path.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "distance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "largest_suffix2(std::string const&amp;):string_algorithm.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "*it + index">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "largest_suffix(std::string const&amp;):string_algorithm.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Solution::isInterleave(std::string, std::string, std::string):leetcode.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "b[0][0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "find_arbitrage(std::vector&lt;std::vector&lt;float, std::allocator&lt;float&gt; &gt;, std::allocator&lt;std::vector&lt;float, std::allocator&lt;float&gt; &gt; &gt; &gt;&amp;, unsigned int):arbitrage.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "parent[0]">
+            </PersistentString>
+            <PersistentString
+               value = "*currency">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "shortest_bitonic_path(std::vector&lt;std::pair&lt;int, int&gt;, std::allocator&lt;std::pair&lt;int, int&gt; &gt; &gt;&amp;):travelling_salesman.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "distance[0][1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "-min">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "longestPalindrome(std::string):array.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "*lp">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
