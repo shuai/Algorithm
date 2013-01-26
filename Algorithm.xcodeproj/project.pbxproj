@@ -34,6 +34,7 @@
 		0654240616B0B26500B4F1CF /* rotate_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654240416B0B26500B4F1CF /* rotate_list.cpp */; };
 		0654240E16B3649300B4F1CF /* valid_number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654240C16B3649300B4F1CF /* valid_number.cpp */; };
 		0654241216B370C700B4F1CF /* test_justification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654241016B370C700B4F1CF /* test_justification.cpp */; };
+		0654242516B3D47B00B4F1CF /* semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654242316B3D47B00B4F1CF /* semaphore.cpp */; };
 		0672D14A1642BACA0090456A /* N-queen-2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0672D1481642BACA0090456A /* N-queen-2.cpp */; };
 		067F1FCD16157E04000434DE /* bigfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FCB16157E04000434DE /* bigfile.cpp */; };
 		068342E016352CBF00965AE6 /* dynamic_programming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068342DE16352CBF00965AE6 /* dynamic_programming.cpp */; };
@@ -104,6 +105,7 @@
 		0654240C16B3649300B4F1CF /* valid_number.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = valid_number.cpp; sourceTree = "<group>"; };
 		0654241016B370C700B4F1CF /* test_justification.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_justification.cpp; sourceTree = "<group>"; };
 		0654241316B3713600B4F1CF /* include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = include.h; sourceTree = "<group>"; };
+		0654242316B3D47B00B4F1CF /* semaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = semaphore.cpp; sourceTree = "<group>"; };
 		0672D1481642BACA0090456A /* N-queen-2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "N-queen-2.cpp"; sourceTree = "<group>"; };
 		067F1FCB16157E04000434DE /* bigfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bigfile.cpp; sourceTree = "<group>"; };
 		068342DE16352CBF00965AE6 /* dynamic_programming.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dynamic_programming.cpp; sourceTree = "<group>"; };
@@ -164,53 +166,52 @@
 		064C512415BA8ECA00C7DC4E /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				0654241D16B3AA8700B4F1CF /* synchronization */,
-				068342E116355DF900965AE6 /* trick */,
-				068342DC16352C4700965AE6 /* DP */,
-				06A6237E15F9E73D00801C85 /* header */,
-				068342D61634147400965AE6 /* graph */,
-				064C512515BA8ECA00C7DC4E /* main.cpp */,
+				06DB8BD71607770A00A21546 /* arbitrage.cpp */,
 				0630A1BA1610429100CAA6E1 /* array.cpp */,
+				067F1FCB16157E04000434DE /* bigfile.cpp */,
 				064C512E15BA8F7500C7DC4E /* binary-search.cpp */,
 				0652202215E674CE003D54D9 /* coin_change.cpp */,
 				064C514015BBC9B300C7DC4E /* DoublyLinkedList.cpp */,
+				068342DC16352C4700965AE6 /* DP */,
+				065423D616AA6B7800B4F1CF /* findKth.cpp */,
 				068B048015BC10B2004EB128 /* gcd.cpp */,
+				068B048215BC230A004EB128 /* geometry.cpp */,
+				068342D61634147400965AE6 /* graph */,
+				0630A1B1160EFF5200CAA6E1 /* hash.cpp */,
+				06A6237E15F9E73D00801C85 /* header */,
+				065423F416B011F600B4F1CF /* insert_interval.cpp */,
 				068C2AEC15E102DA00348AAA /* knapsack.cpp */,
+				065423FC16B02DA900B4F1CF /* kth_permutation.cpp */,
 				064C513015BA941700C7DC4E /* LCS.cpp */,
+				068342E21635A27C00965AE6 /* leetcode.cpp */,
 				06E1229E15D7BD870082C656 /* LIS.cpp */,
 				06A6237B15F9E6FD00801C85 /* list.cpp */,
+				064C512515BA8ECA00C7DC4E /* main.cpp */,
 				06A6237515F9DC1100801C85 /* matrix.cpp */,
-				068B048215BC230A004EB128 /* geometry.cpp */,
+				065423EC16B00BF200B4F1CF /* merge_interval.cpp */,
+				06D4ADCB163F9E1B00AC2B6D /* merge_list.cpp */,
+				065423E516ABCD8800B4F1CF /* MergeList.cpp */,
+				0672D1481642BACA0090456A /* N-queen-2.cpp */,
+				06AD6CDE16418BBE00C62E63 /* N-queen.cpp */,
 				068B048815BD95BD004EB128 /* number.cpp */,
 				06B9853815DEA04A002D95A4 /* paragraph_layout.cpp */,
 				064AD5C015FE389900287405 /* permutation.cpp */,
 				068B047915BBFC06004EB128 /* priority_queue.cpp */,
 				068B049315C3834F004EB128 /* random_line_in_file.cpp */,
+				065423E216ABAF7F00B4F1CF /* regular_expression.cpp */,
 				064C514315BBCA1E00C7DC4E /* reverse_sentence.cpp */,
+				0654240416B0B26500B4F1CF /* rotate_list.cpp */,
 				064AD5CB15FEEBAD00287405 /* sort.cpp */,
 				06AB845115FC681D00752D90 /* stack.cpp */,
 				064C513215BAA1BC00C7DC4E /* string_algorithm.cpp */,
+				06DB8BC11601CDD300A21546 /* suffix_tree.cpp */,
+				0654241D16B3AA8700B4F1CF /* synchronization */,
+				0654241016B370C700B4F1CF /* test_justification.cpp */,
 				0604DE7915F269E0008733F6 /* topcoder.cpp */,
 				061E021715DAA37A00B40B48 /* travelling_salesman.cpp */,
+				068342E116355DF900965AE6 /* trick */,
 				0652201E15E66701003D54D9 /* unit_task_schedule.cpp */,
-				06DB8BC11601CDD300A21546 /* suffix_tree.cpp */,
-				06DB8BD71607770A00A21546 /* arbitrage.cpp */,
-				06B27931160DA7ED0017735F /* multithreading.cpp */,
-				0630A1B1160EFF5200CAA6E1 /* hash.cpp */,
-				067F1FCB16157E04000434DE /* bigfile.cpp */,
-				068342E21635A27C00965AE6 /* leetcode.cpp */,
-				06D4ADCB163F9E1B00AC2B6D /* merge_list.cpp */,
-				06AD6CDE16418BBE00C62E63 /* N-queen.cpp */,
-				0672D1481642BACA0090456A /* N-queen-2.cpp */,
-				065423D616AA6B7800B4F1CF /* findKth.cpp */,
-				065423E216ABAF7F00B4F1CF /* regular_expression.cpp */,
-				065423E516ABCD8800B4F1CF /* MergeList.cpp */,
-				065423EC16B00BF200B4F1CF /* merge_interval.cpp */,
-				065423F416B011F600B4F1CF /* insert_interval.cpp */,
-				065423FC16B02DA900B4F1CF /* kth_permutation.cpp */,
-				0654240416B0B26500B4F1CF /* rotate_list.cpp */,
 				0654240C16B3649300B4F1CF /* valid_number.cpp */,
-				0654241016B370C700B4F1CF /* test_justification.cpp */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -218,6 +219,8 @@
 		0654241D16B3AA8700B4F1CF /* synchronization */ = {
 			isa = PBXGroup;
 			children = (
+				06B27931160DA7ED0017735F /* multithreading.cpp */,
+				0654242316B3D47B00B4F1CF /* semaphore.cpp */,
 			);
 			name = synchronization;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				0654240616B0B26500B4F1CF /* rotate_list.cpp in Sources */,
 				0654240E16B3649300B4F1CF /* valid_number.cpp in Sources */,
 				0654241216B370C700B4F1CF /* test_justification.cpp in Sources */,
+				0654242516B3D47B00B4F1CF /* semaphore.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +423,7 @@
 		064C512C15BA8ECA00C7DC4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -427,6 +432,7 @@
 		064C512D15BA8ECA00C7DC4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

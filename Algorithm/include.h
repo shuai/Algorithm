@@ -9,11 +9,13 @@
 #ifndef Algorithm_include_h
 #define Algorithm_include_h
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <map>
 #include <set>
 #include <list>
+#include <cassert>
 
 using namespace std;
 

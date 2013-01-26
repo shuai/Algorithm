@@ -74,12 +74,17 @@ int main(int argc, const char * argv[])
 {
     srand(time(NULL));
 
-    extern void test_median();
+    //extern void test_median();
     //test_median();
  
-    extern void test_text_justification();
-    test_text_justification();
-    
+//    extern void test_text_justification();
+//    test_text_justification();
+
+//    extern void test_thread();
+//    test_thread();
+
+    extern void test_semaphore();
+    test_semaphore();
     
     //test_add_binary();
     
