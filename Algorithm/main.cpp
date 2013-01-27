@@ -83,8 +83,11 @@ int main(int argc, const char * argv[])
 //    extern void test_thread();
 //    test_thread();
 
-    extern void test_semaphore();
-    test_semaphore();
+    //extern void test_semaphore();
+    //test_semaphore();
+    
+    extern void test_sqrt();
+    test_sqrt();
     
     //test_add_binary();
     
