@@ -39,6 +39,9 @@
 		0654243216B4B97100B4F1CF /* simplify_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654243016B4B97100B4F1CF /* simplify_path.cpp */; };
 		0654243516B4D18500B4F1CF /* set_matrix_zero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654243316B4D18500B4F1CF /* set_matrix_zero.cpp */; };
 		0654243816B4D4E300B4F1CF /* dutch_flag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654243616B4D4E300B4F1CF /* dutch_flag.cpp */; };
+		0654243F16B5149B00B4F1CF /* min_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654243D16B5149B00B4F1CF /* min_window.cpp */; };
+		0654244316B52A3C00B4F1CF /* word_search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654244116B52A3C00B4F1CF /* word_search.cpp */; };
+		0654244616B52C9600B4F1CF /* remove_duplicates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0654244416B52C9600B4F1CF /* remove_duplicates.cpp */; };
 		0672D14A1642BACA0090456A /* N-queen-2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0672D1481642BACA0090456A /* N-queen-2.cpp */; };
 		067F1FCD16157E04000434DE /* bigfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FCB16157E04000434DE /* bigfile.cpp */; };
 		068342E016352CBF00965AE6 /* dynamic_programming.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068342DE16352CBF00965AE6 /* dynamic_programming.cpp */; };
@@ -114,6 +117,9 @@
 		0654243016B4B97100B4F1CF /* simplify_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplify_path.cpp; sourceTree = "<group>"; };
 		0654243316B4D18500B4F1CF /* set_matrix_zero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = set_matrix_zero.cpp; sourceTree = "<group>"; };
 		0654243616B4D4E300B4F1CF /* dutch_flag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dutch_flag.cpp; sourceTree = "<group>"; };
+		0654243D16B5149B00B4F1CF /* min_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = min_window.cpp; sourceTree = "<group>"; };
+		0654244116B52A3C00B4F1CF /* word_search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = word_search.cpp; sourceTree = "<group>"; };
+		0654244416B52C9600B4F1CF /* remove_duplicates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = remove_duplicates.cpp; sourceTree = "<group>"; };
 		0672D1481642BACA0090456A /* N-queen-2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "N-queen-2.cpp"; sourceTree = "<group>"; };
 		067F1FCB16157E04000434DE /* bigfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bigfile.cpp; sourceTree = "<group>"; };
 		068342DE16352CBF00965AE6 /* dynamic_programming.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dynamic_programming.cpp; sourceTree = "<group>"; };
@@ -242,6 +248,9 @@
 				0654240C16B3649300B4F1CF /* valid_number.cpp */,
 				0654243316B4D18500B4F1CF /* set_matrix_zero.cpp */,
 				0654243616B4D4E300B4F1CF /* dutch_flag.cpp */,
+				0654243D16B5149B00B4F1CF /* min_window.cpp */,
+				0654244116B52A3C00B4F1CF /* word_search.cpp */,
+				0654244416B52C9600B4F1CF /* remove_duplicates.cpp */,
 			);
 			name = Leetcode;
 			sourceTree = "<group>";
@@ -393,6 +402,9 @@
 				0654243216B4B97100B4F1CF /* simplify_path.cpp in Sources */,
 				0654243516B4D18500B4F1CF /* set_matrix_zero.cpp in Sources */,
 				0654243816B4D4E300B4F1CF /* dutch_flag.cpp in Sources */,
+				0654243F16B5149B00B4F1CF /* min_window.cpp in Sources */,
+				0654244316B52A3C00B4F1CF /* word_search.cpp in Sources */,
+				0654244616B52C9600B4F1CF /* remove_duplicates.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
