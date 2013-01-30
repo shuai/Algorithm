@@ -66,6 +66,10 @@
 		06DB8BD91607770A00A21546 /* arbitrage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06DB8BD71607770A00A21546 /* arbitrage.cpp */; };
 		06E122A015D7BD870082C656 /* LIS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E1229E15D7BD870082C656 /* LIS.cpp */; };
 		06E122A415D7C2CE0082C656 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E122A215D7C2CE0082C656 /* test.cpp */; };
+		06E3867016B94B640069CEFF /* rotated_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E3866E16B94B640069CEFF /* rotated_array.cpp */; };
+		06E3867416B94F800069CEFF /* delete_duplicates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E3867216B94F800069CEFF /* delete_duplicates.cpp */; };
+		06E3867716B9529A0069CEFF /* delete_duplicates_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E3867516B9529A0069CEFF /* delete_duplicates_2.cpp */; };
+		06E3867A16B956010069CEFF /* partition_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E3867816B956010069CEFF /* partition_list.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,6 +152,10 @@
 		06E1229E15D7BD870082C656 /* LIS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LIS.cpp; sourceTree = "<group>"; };
 		06E122A215D7C2CE0082C656 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		06E122A315D7C2CE0082C656 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		06E3866E16B94B640069CEFF /* rotated_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rotated_array.cpp; sourceTree = "<group>"; };
+		06E3867216B94F800069CEFF /* delete_duplicates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = delete_duplicates.cpp; sourceTree = "<group>"; };
+		06E3867516B9529A0069CEFF /* delete_duplicates_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = delete_duplicates_2.cpp; sourceTree = "<group>"; };
+		06E3867816B956010069CEFF /* partition_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = partition_list.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +259,10 @@
 				0654243D16B5149B00B4F1CF /* min_window.cpp */,
 				0654244116B52A3C00B4F1CF /* word_search.cpp */,
 				0654244416B52C9600B4F1CF /* remove_duplicates.cpp */,
+				06E3866E16B94B640069CEFF /* rotated_array.cpp */,
+				06E3867216B94F800069CEFF /* delete_duplicates.cpp */,
+				06E3867516B9529A0069CEFF /* delete_duplicates_2.cpp */,
+				06E3867816B956010069CEFF /* partition_list.cpp */,
 			);
 			name = Leetcode;
 			sourceTree = "<group>";
@@ -405,6 +417,10 @@
 				0654243F16B5149B00B4F1CF /* min_window.cpp in Sources */,
 				0654244316B52A3C00B4F1CF /* word_search.cpp in Sources */,
 				0654244616B52C9600B4F1CF /* remove_duplicates.cpp in Sources */,
+				06E3867016B94B640069CEFF /* rotated_array.cpp in Sources */,
+				06E3867416B94F800069CEFF /* delete_duplicates.cpp in Sources */,
+				06E3867716B9529A0069CEFF /* delete_duplicates_2.cpp in Sources */,
+				06E3867A16B956010069CEFF /* partition_list.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
