@@ -613,34 +613,6 @@ public:
 //        return node;
 //    }
     
-    int numDecodings(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (s.empty() || s[0] == '0')
-            return 0;
-        
-        int count[1+s.size()];
-        count[0] = 1;
-        count[1] = 1;
-        
-        for (unsigned i=2; i<=s.size(); i++)
-        {
-            if (s[i-1] == '0')
-            {
-                if (s[i-2] > '0' && s[i-2] <= '2')
-                    count[i] = count[i-2];
-                else
-                    return 0;
-            }
-            else if (s[i-2] == '1' || (s[i-2] == '2' && s[i-1] <= '6'))
-                count[i] = count[i-1] + count[i-2];
-            else
-                count[i] = count[i-1];
-        }
-        
-        return count[s.size()];
-    }
-    
     int numDistinct(string T, string S) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
