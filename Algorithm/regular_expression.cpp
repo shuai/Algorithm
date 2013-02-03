@@ -6,8 +6,6 @@
 //
 //
 
-#include <unordered_set>
-
 class SolutionRegex {
 public:
     bool isMatch(const char *s, const char *p) {
@@ -20,7 +18,7 @@ public:
         if (*s == 0) {
             if (*(p+1) != '*')
                 return false;
-            return (s, p+2);
+            return isMatch(s, p+2);
         }
         
         if (p[1] == '*') {

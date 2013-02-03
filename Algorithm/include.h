@@ -33,5 +33,12 @@ struct Interval {
     Interval(int s, int e) : start(s), end(e) {}
 };
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
 
 #endif
