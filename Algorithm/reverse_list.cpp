@@ -40,3 +40,45 @@ public:
         return sentinel.next;
     }
 };
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution2 {
+public:
+    ListNode *reverseBetween(ListNode *head, int m, int n) {
+        // Start typing your C/C++ solution below
+        // DO NOT write int main() function
+        
+        if (!head)
+            return NULL;
+        
+        if (m >= n)
+            return head;
+        
+        ListNode sentinel(0), *prev = &sentinel;
+        sentinel.next = head;
+        
+        for (int pos=1; pos<m; pos++) {
+            prev = head;
+            head = head->next;
+        }
+        
+        ListNode* sub_tail = head, *sub_head = head, *next = head->next;
+        for (int i=0; i<n-m && next; i++) {
+            ListNode* current = next;
+            next = next->next;
+            current->next = sub_head;
+            sub_head = current;
+        }
+        
+        prev->next = sub_head;
+        sub_tail->next = next;
+        return sentinel.next;
+    }
+};

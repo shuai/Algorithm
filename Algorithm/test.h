@@ -11,27 +11,13 @@
 
 #include <iostream>
 #include <vector>
-#include "list.h"
+#include "include.h"
 
 using namespace std;
-
-
-struct TreeNode
-{
-    TreeNode(int key = 0)
-    :key(key)
-    {
-        left = right = NULL;
-    }
-    TreeNode* left;
-    TreeNode* right;
-    int key;
-};
 
 ListNode* build_list();
 
 ListNode* build_circular_list();
-
 
 TreeNode* build_tree();
 

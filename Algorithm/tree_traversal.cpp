@@ -32,7 +32,7 @@ void traverse_preorder(TreeNode* root)
         stack.pop_back();
         
         if (curr) {
-            cout << curr->key << endl;
+            cout << curr->val << endl;
             stack.push_back(curr->right);
             stack.push_back(curr->left);
         }
@@ -51,7 +51,7 @@ void traverse_inorder(TreeNode* root)
         } else {
             current = stack.back();
             stack.pop_back();
-            cout << current->key << endl;
+            cout << current->val << endl;
             current = current->right;
         }
     }
@@ -70,7 +70,7 @@ void traverse_postorder(TreeNode* root)
             current = stack.back();
             if (current->right == NULL || current->right == last) {
                 stack.pop_back();
-                cout << current->key << endl;
+                cout << current->val << endl;
                 last = current;
                 current = NULL;
             }

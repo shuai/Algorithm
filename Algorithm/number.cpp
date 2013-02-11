@@ -13,45 +13,6 @@
 #include <cassert>
 using namespace std;
 
-double mypow(double base, unsigned exponent)
-{
-    if (exponent == 0) {
-        return 1;
-    }
-    
-    if (base == 0)
-        return 0;
-    
-    double result = 1;
-    double current = base;
-    while (exponent) {
-        if (exponent & 1)
-        {
-            result *= current;
-        }
-        exponent >>= 1;
-        current *= current;
-    }
-    return result;
-}
-
-void test_pow()
-{    
-    cout << "testing pow" << endl;
-    for (int i=0; i<10000000; i++) {
-        double base = (double)(rand()%10000)/1000;
-        unsigned exponent = rand()%10;
-        
-        double result1 = mypow(base, exponent);
-        double result2 = pow((long double)base, (long double)exponent);
-        if (result1 < result2 - 0.000001 || result1 > result2 + 0.000001 )            
-            cout << "DIFFERENT base: " << base << " exponent: " << exponent << " " << exponent << " mypow:" << mypow(base, exponent) << " pow:"<< pow((long double)base, (long double)exponent) << endl;
-    }
-    cout << "testing done" << endl;
-
-}
-
-
 //Design an algorithm to find the kth number such that the only prime factors are 3, 5, and 7.
 void generate_nums(vector<unsigned>& factors, unsigned num)
 {

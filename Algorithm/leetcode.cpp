@@ -409,49 +409,6 @@ public:
         return output;
     }
     
-    vector<vector<int> > levelOrderBottom(TreeNode2 *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        vector<vector<int> > ret;
-        list<vector<int> > output;
-        vector<int> level;
-        
-        if (!root)
-            return ret;
-        
-        list<TreeNode2*> queue;
-        queue.push_back(root);
-        unsigned count = 1;
-        
-        while (!queue.empty())
-        {
-            while (count --)
-            {
-                TreeNode2* node = queue.front();
-                queue.pop_front();
-                if (node->left)
-                    queue.push_back(node->left);
-                if (node->right)
-                    queue.push_back(node->right);
-                level.push_back(node->val);
-            }
-            output.push_front(level);
-            level.clear();
-            count = queue.size();
-        
-        }
-        
-        ret.reserve(output.size());
-        list<vector<int> >::iterator it = output.begin();
-        while (it != output.end())
-        {
-            ret.push_back(*it);
-            it++;
-        }
-        
-        return ret;
-    }
     
     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
         // Start typing your C/C++ solution below
@@ -568,51 +525,7 @@ public:
         
         return max_capacity;
     }
-    
-//    TreeNode2 *sortedListToBST(ListNode *head) {
-//        // Start typing your C/C++ solution below
-//        // DO NOT write int main() function
-//        unsigned size=0;
-//        ListNode* tmp = head;
-//        while (tmp)
-//        {
-//            size++;
-//            tmp=tmp->next;
-//        }
-//        
-//        return sortedListToBST(head, size);
-//    }
-//    
-//    TreeNode2 *sortedListToBST(ListNode*& head, unsigned size) {
-//        // Start typing your C/C++ solution below
-//        // DO NOT write int main() function
-//        
-//        if (!head)
-//            return NULL;
-//        
-//        unsigned middle = size/2;
-//        ListNode* middleNode = head;
-//        
-//        TreeNode2* left = NULL, *right = NULL;
-//        if (middle)
-//        {
-//            left = sortedListToBST(middleNode, middle);
-//            middleNode = middleNode->next;
-//        }
-//        
-//        head = middleNode;
-//        if (middle + 1 < size)
-//        {
-//            head = head->next;
-//            right = sortedListToBST(head, size-middle-1);
-//        }
-//        
-//        TreeNode2* node = new TreeNode2(middleNode->val);
-//        node->left = left;
-//        node->right = right;
-//        return node;
-//    }
-    
+        
     int numDistinct(string T, string S) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -673,72 +586,7 @@ public:
         }
         return negative ? -n : n;
     }
-    
-    int minDistance(string word1, string word2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         
-        int d[word1.size()+1][word2.size()+1];
-        for (int i=0; i<=word1.size(); i++)
-            d[i][0] = i;
-        for (int i=0; i<=word2.size(); i++)
-            d[0][i] = i;
-        
-        for (int i=1; i<=word1.size(); i++)
-            for (int j=1; j<=word2.size(); j++)
-            {
-                if (word1[i-1] == word2[j-1])
-                    d[i][j] = min(min(d[i-1][j-1], d[i-1][j] + 1), d[i][j-1] + 1);
-                else
-                    d[i][j] = 1 + min(min(d[i-1][j-1], d[i-1][j]), d[i][j-1]);
-            }
-        return d[word1.size()][word2.size()];
-    }
-    
-    int firstMissingPositive(int A[], int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        return firstMissingPositive(A, n, 1);
-    }
-    
-    int firstMissingPositive(int* A, int n, int min) {
-        int pivot = A[n/2];
-        int* less = A, *equal = A;
-        
-        int* ptr = A;
-        while (ptr < A+n)
-        {
-            if (*ptr < pivot)
-                swap(*less++, *ptr);
-            
-            if (*ptr == pivot)
-            {
-                equal = max(equal, less);
-                swap(*equal++, *ptr);
-            }
-            ptr ++;
-        }
-        
-        if (pivot > min)
-            if (less > A)
-            {
-                int missing = firstMissingPositive(A, less-A, min);
-                if (missing != pivot)
-                    return missing;
-            }
-            else
-            {
-                return std::min(min, pivot-1);
-            }
-        
-        
-        if (equal < A+n)
-        {
-            return firstMissingPositive(equal, A+n-equal, max(min, pivot + 1));
-        }
-        
-        return max(min, pivot+1);
-    }
     
     void flatten(TreeNode2 *root) {
         // Start typing your C/C++ solution below

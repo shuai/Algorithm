@@ -6,7 +6,7 @@
 //
 //
 
-#include "list.h"
+#include "include.h"
 #include "test.h"
 
 
@@ -38,7 +38,7 @@ void test_nth_last()
     for (int i=0; i<15; i++) {
         ListNode* node = nth_last(list, i);
         if (node)
-            cout << i << "th last element is " << node->key << endl;
+            cout << i << "th last element is " << node->val << endl;
         else
             cout << i << "th last element is none" << endl;
     }
@@ -79,5 +79,5 @@ ListNode* find_circle_beginning(ListNode* node)
 void test_list_circle()
 {
     ListNode* list = build_circular_list();
-    cout << "Beginning of list :" << find_circle_beginning(list)->key << endl;
+    cout << "Beginning of list :" << find_circle_beginning(list)->val << endl;
 }

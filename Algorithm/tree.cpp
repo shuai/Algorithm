@@ -29,7 +29,7 @@ bool is_tree_identical(TreeNode* left, TreeNode* right)
         stack.pop_back();
         stack2.pop_back();
         
-        if (node->key != node2->key) {
+        if (node->val != node2->val) {
             return false;
         }
         
@@ -72,7 +72,7 @@ void nth_in_tree(TreeNode* tree, unsigned& n)
 
     n--;
     if (n == 0) {
-        cout << tree->key << endl;
+        cout << tree->val << endl;
         return;
     }
     
@@ -116,7 +116,7 @@ void test_tree2list()
     tree2list(tree, first, last);
     
     while (first) {
-        cout << first->key << endl;
+        cout << first->val << endl;
         first = first->right;
     }
 }
@@ -126,7 +126,7 @@ void test_tree()
     TreeNode* tree = build_tree();
     TreeNode* tree2 = build_tree();
     
-    tree2->left->right->key = 0;
+    tree2->left->right->val = 0;
     
     //cout << "test tree identity: " << is_tree_identical(tree, tree2) << endl;
     

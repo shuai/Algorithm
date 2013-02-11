@@ -74,6 +74,20 @@ int main(int argc, const char * argv[])
 {
     srand(time(NULL));
 
+//    extern void test_egg();
+//    test_egg();
+//    
+//    extern void test_expression();
+//    test_expression();
+//
+    cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
+
+//    extern void test_serialization();
+//    test_serialization();
+    
+//    extern void test_2sum();
+//    test_2sum();
+    
     //extern void test_median();
     //test_median();
  
@@ -91,9 +105,9 @@ int main(int argc, const char * argv[])
 
 //    extern void test_combine();
 //    test_combine();
-
-    extern void test_subset();
-    test_subset();
+//
+//    extern void test_subset();
+//    test_subset();
 
     
     //test_add_binary();

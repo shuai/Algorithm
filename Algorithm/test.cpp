@@ -171,19 +171,19 @@ TreeNode* build_random_tree(unsigned int size)
         
         if (!root)
         {
-            root = new TreeNode;
+            root = new TreeNode(0);
             root->left = root->right = NULL;
-            root->key = key;
+            root->val = key;
         }
         else
         {
-            TreeNode* newnode = new TreeNode;
+            TreeNode* newnode = new TreeNode(0);
             newnode->left = newnode->right = NULL;
-            newnode->key = key;
+            newnode->val = key;
             
             TreeNode* target = root;
             while (true) {
-                if (target->key > key)
+                if (target->val > key)
                 {
                     if (target->left)
                         target = target->left;

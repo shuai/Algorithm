@@ -175,61 +175,6 @@ public:
             
             return string(S.c_str() + start, count);
         }
-    
-    static void add(string& num, unsigned value, unsigned bit)
-    {
-        string x;
-        
-        while (value)
-        {
-            assert(bit < num.size());
-            value = value + num[bit] - '0';
-            num[bit] = '0' + value % 10;
-            value /= 10;
-            bit ++;
-        }
-    }
-    
-    static string multiply(string num1, string num2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        if (num1.empty() || num2.empty())
-            return "";
-        
-        string result;
-        result.assign(num1.size() + num2.size(), '0');
-        
-        unsigned carry = 0, bit = 0;
-        string::const_reverse_iterator it = num1.rbegin();
-        while (it != num1.rend())
-        {
-            unsigned bit2 = 0;
-            string::const_reverse_iterator it2 = num2.rbegin();
-            while (it2 != num2.rend())
-            {
-                int product = (*it-'0')*(*it2-'0') + result[bit+bit2] - '0' + carry;
-                result[bit + bit2] = '0' + product % 10;
-                carry = product / 10;
-                it2 ++;
-                bit2 ++;
-            }
-            add(result, carry, bit+bit2);
-            carry = 0;
-            
-            it ++;
-            bit ++;
-        }
-        
-        int i=result.size()-1;
-        for (; i>0; i--)
-            if (result[i] != '0')
-                break;
-        result.erase(result.begin() + i + 1, result.end());
-        std::reverse(result.begin(), result.end());
-        return result;
-    }
-    
     };
 
 int test_merge()
@@ -243,7 +188,4 @@ int test_merge()
     
     string ret = Solution::minWindow("ab", "b");
     priority_queue<int> x;
-
-
-    string te = Solution::multiply("9", "9");
 }

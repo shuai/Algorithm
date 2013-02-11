@@ -25,7 +25,7 @@ TreeNode* least_common_ancestor(TreeNode* root, int value1, int value2)
         TreeNode* child = NULL;
         if (!last || last->left == current || last ->right == current)
         {
-            if (current->key == value1 || current->key == value2)
+            if (current->val == value1 || current->val == value2)
             {
                 if (ancestor)
                     return ancestor;
@@ -81,7 +81,7 @@ TreeNode* lca_recursive(TreeNode* root, int value1, int value2, bool& found)
         return ancestor;
     }
     
-    if (value1 == root->key || value2 == root->key) {
+    if (value1 == root->val || value2 == root->val) {
         found_self = true;
     }
     
@@ -100,47 +100,47 @@ void test_lca()
     bool dummy;
     TreeNode* root = build_tree();
     int node1 = 2, node2 = 3;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node1 = 4;
     node2 = 2;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node1 = 2;
     node2 = 4;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node1 = 4;
     node2 = 9;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node2 = 5;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node2 = 3;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node2 = 7;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node2 = 8;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node1 = 1;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
     node1 = 3;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->key << endl;
-    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->key << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << least_common_ancestor(root, node1, node2)->val << endl;
+    cout << "Test lca, common ancestor of " << node1 << " & " << node2 << " is " << lca_recursive(root, node1, node2, dummy)->val << endl;
 
 
 }
