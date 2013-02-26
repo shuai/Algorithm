@@ -14,39 +14,32 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        string ret;
+        string result;
+        
         for (int i=0; i<path.size(); i++) {
             if (path[i] == '.') {
-                
-                if (i+1 == path.size() || path[i+1] == '/') {
-                    if (ret.size() && *ret.rbegin() == '/')
-                        ret.resize(ret.size()-1);
-                    continue;
+                if (i != path.size()-1){
+                    if (path[i+1] == '.') {
+                        i++;
+                        if (result.size() > 1 && result.back() == '/')
+                            result.pop_back();
+                        while (result.size() && result.back() != '/')
+                            result.pop_back();
+                    } else if (path[i+1] != '/')
+                        result.push_back('.');
                 }
-                
-                if (i+1 != path.size() && path[i+1] == '.') {
-                    i++;
-                    if (ret.size() && *ret.rbegin() == '/')
-                        ret.resize(ret.size()-1);
-                    while (ret.size() && *ret.rbegin() != '/')
-                        ret.resize(ret.size()-1);
-                    continue;
-                }
+                continue;
             }
             
-            if (path[i] == '/' && ret.size() && *ret.rbegin() == '/')
+            if (path[i] == '/' && result.size() && result.back() == '/')
                 continue;
             
-            ret.push_back(path[i]);
+            result.push_back(path[i]);
         }
         
-        if (ret.size() && *ret.rbegin() == '/')
-            ret.resize(ret.size()-1);
+        if (result.size() > 1 && result.back() == '/')
+            result.pop_back();
         
-        if (ret.empty())
-            ret.push_back('/');
-        
-        return ret;
+        return result;
     }
 };
-

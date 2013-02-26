@@ -525,30 +525,6 @@ public:
         
         return max_capacity;
     }
-        
-    int numDistinct(string T, string S) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int num[S.size()+1][T.size()+1];
-        for (int i=0; i<=T.size(); i++)
-        {
-            num[0][i] = 1;
-        }
-        
-        for (int i=1; i<=S.size(); i++)
-        {
-            num[i][0] = 0;
-            for (int j=1; j<=T.size()-(S.size()-i); j++)
-            {
-                if (S[i-1] == T[j-1])
-                    num[i][j] = num[i][j-1] + num[i-1][j-1];
-                else
-                    num[i][j] = num[i][j-1];
-            }
-        }
-        
-        return num[S.size()][T.size()];
-    }
     
     int divide(int _dividend, int _divisor) {
         // Start typing your C/C++ solution below
@@ -585,33 +561,6 @@ public:
             n += c;
         }
         return negative ? -n : n;
-    }
-        
-    
-    void flatten(TreeNode2 *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        TreeNode2* tail = NULL;
-        vector<TreeNode2*> stack;
-        if (root)
-            stack.push_back(root);
-        
-        while (stack.size())
-        {
-            TreeNode2* node = stack.back();
-            stack.pop_back();
-            
-            if (node->right)
-                stack.push_back(node->right);
-            if (node->left)
-                stack.push_back(node->left);
-            
-            node->left = tail;
-            if (tail)
-                tail->right = node;
-            tail = node;
-        }
     }
     
     vector<string> generateParenthesis(int n) {

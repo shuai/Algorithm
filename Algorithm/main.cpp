@@ -69,6 +69,7 @@ extern void test_n_queen();
 
 #include <memory>
 #include <queue>
+#include <unordered_set>
 
 int main(int argc, const char * argv[])
 {
@@ -80,7 +81,11 @@ int main(int argc, const char * argv[])
 //    extern void test_expression();
 //    test_expression();
 //
-    cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
+    
+    unordered_set<pair<int, int>> set;
+    
+    
+     //cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
 
 //    extern void test_serialization();
 //    test_serialization();
