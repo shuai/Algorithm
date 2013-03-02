@@ -84,6 +84,9 @@ int main(int argc, const char * argv[])
     
     unordered_set<pair<int, int>> set;
     
+    int a = 1;
+    a <<= 0;
+    cout << a << endl;
     
      //cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
 

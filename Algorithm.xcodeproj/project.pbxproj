@@ -81,13 +81,14 @@
 		0694838316BF405A00F68DF1 /* path_sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0694838116BF405A00F68DF1 /* path_sum.cpp */; };
 		06A486A416BE8D03007E8091 /* construct_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A486A216BE8D03007E8091 /* construct_tree.cpp */; };
 		06A486A716BE9C60007E8091 /* sorted_list_to_bst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A486A516BE9C60007E8091 /* sorted_list_to_bst.cpp */; };
+		06A4E68B16E2284F00AB3784 /* palindrome_partition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A4E68916E2284F00AB3784 /* palindrome_partition.cpp */; };
+		06A4E68E16E22B7600AB3784 /* palindrome_partition_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A4E68C16E22B7600AB3784 /* palindrome_partition_2.cpp */; };
 		06A6237715F9DC1100801C85 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A6237515F9DC1100801C85 /* matrix.cpp */; };
 		06A6237D15F9E6FD00801C85 /* list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A6237B15F9E6FD00801C85 /* list.cpp */; };
 		06AB845315FC681D00752D90 /* stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06AB845115FC681D00752D90 /* stack.cpp */; };
 		06AD6CE016418BBE00C62E63 /* N-queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06AD6CDE16418BBE00C62E63 /* N-queen.cpp */; };
 		06B27933160DA7ED0017735F /* multithreading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B27931160DA7ED0017735F /* multithreading.cpp */; };
 		06B5E87516231055004CA4D7 /* testcase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B5E87316231055004CA4D7 /* testcase.cpp */; };
-		06B9853A15DEA04A002D95A4 /* paragraph_layout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B9853815DEA04A002D95A4 /* paragraph_layout.cpp */; };
 		06C592F016109B9D0001CEE3 /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C592EE16109B9D0001CEE3 /* tree.cpp */; };
 		06C5A64D15E8FF2C003371DD /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5A64B15E8FF2C003371DD /* graph.cpp */; };
 		06D0F4DC16C50EDA005D0AAD /* egg_floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06D0F4DA16C50EDA005D0AAD /* egg_floor.cpp */; };
@@ -208,13 +209,14 @@
 		0694838116BF405A00F68DF1 /* path_sum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = path_sum.cpp; sourceTree = "<group>"; };
 		06A486A216BE8D03007E8091 /* construct_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = construct_tree.cpp; sourceTree = "<group>"; };
 		06A486A516BE9C60007E8091 /* sorted_list_to_bst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sorted_list_to_bst.cpp; sourceTree = "<group>"; };
+		06A4E68916E2284F00AB3784 /* palindrome_partition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palindrome_partition.cpp; sourceTree = "<group>"; };
+		06A4E68C16E22B7600AB3784 /* palindrome_partition_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = palindrome_partition_2.cpp; sourceTree = "<group>"; };
 		06A6237515F9DC1100801C85 /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cpp; sourceTree = "<group>"; };
 		06A6237B15F9E6FD00801C85 /* list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = list.cpp; sourceTree = "<group>"; };
 		06AB845115FC681D00752D90 /* stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack.cpp; sourceTree = "<group>"; };
 		06AD6CDE16418BBE00C62E63 /* N-queen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "N-queen.cpp"; sourceTree = "<group>"; };
 		06B27931160DA7ED0017735F /* multithreading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multithreading.cpp; sourceTree = "<group>"; };
 		06B5E87316231055004CA4D7 /* testcase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testcase.cpp; sourceTree = "<group>"; };
-		06B9853815DEA04A002D95A4 /* paragraph_layout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = paragraph_layout.cpp; sourceTree = "<group>"; };
 		06B9853C15DF81E2002D95A4 /* layout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = layout.txt; sourceTree = "<group>"; };
 		06C592EE16109B9D0001CEE3 /* tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
 		06C5A64B15E8FF2C003371DD /* graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graph.cpp; sourceTree = "<group>"; };
@@ -303,7 +305,6 @@
 				06D4ADCB163F9E1B00AC2B6D /* merge_list.cpp */,
 				065423E516ABCD8800B4F1CF /* MergeList.cpp */,
 				068B048815BD95BD004EB128 /* number.cpp */,
-				06B9853815DEA04A002D95A4 /* paragraph_layout.cpp */,
 				064AD5C015FE389900287405 /* permutation.cpp */,
 				068B047915BBFC06004EB128 /* priority_queue.cpp */,
 				068B049315C3834F004EB128 /* random_line_in_file.cpp */,
@@ -397,6 +398,8 @@
 				0617199F16DCDD3B00B00C81 /* sum_root_to_leaf.cpp */,
 				061719A216DCE7A700B00C81 /* surrounded_region.cpp */,
 				0636E38216E1D67100B39625 /* largest_rectangle.cpp */,
+				06A4E68916E2284F00AB3784 /* palindrome_partition.cpp */,
+				06A4E68C16E22B7600AB3784 /* palindrome_partition_2.cpp */,
 			);
 			name = Leetcode;
 			sourceTree = "<group>";
@@ -498,7 +501,6 @@
 				06E122A015D7BD870082C656 /* LIS.cpp in Sources */,
 				06E122A415D7C2CE0082C656 /* test.cpp in Sources */,
 				061E021915DAA37A00B40B48 /* travelling_salesman.cpp in Sources */,
-				06B9853A15DEA04A002D95A4 /* paragraph_layout.cpp in Sources */,
 				068C2AEE15E102DA00348AAA /* knapsack.cpp in Sources */,
 				0652202415E674CE003D54D9 /* coin_change.cpp in Sources */,
 				06C5A64D15E8FF2C003371DD /* graph.cpp in Sources */,
@@ -591,6 +593,8 @@
 				061719A116DCDD3B00B00C81 /* sum_root_to_leaf.cpp in Sources */,
 				061719A416DCE7A800B00C81 /* surrounded_region.cpp in Sources */,
 				0636E38416E1D67100B39625 /* largest_rectangle.cpp in Sources */,
+				06A4E68B16E2284F00AB3784 /* palindrome_partition.cpp in Sources */,
+				06A4E68E16E22B7600AB3784 /* palindrome_partition_2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
