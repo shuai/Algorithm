@@ -45,7 +45,7 @@ public:
                 diagnal = match[col];
                 left = match[col] = m;
             }
-            diagnal = false;n
+            diagnal = false;
         }
         return match[len_p-1];
     }

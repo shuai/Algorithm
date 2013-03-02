@@ -498,34 +498,6 @@ public:
         return node;
     }
     
-    int maxArea(vector<int> &height) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int max_capacity = 0;
-        
-        if (height.size())
-        {
-            vector<pair<int, int> > tmp;
-            for (unsigned i=0; i<height.size(); i++)
-                tmp.push_back(make_pair(height[i],i));
-            
-            sort(tmp.rbegin(), tmp.rend());
-            int min_x = tmp.front().second, max_x = min_x;
-            unsigned i=1;
-            while (i<height.size())
-            {
-                int capacity = tmp[i].first*max(abs(tmp[i].second-min_x), abs(tmp[i].second-max_x));
-                if (capacity > max_capacity)
-                    max_capacity = capacity;
-                min_x = min(min_x, tmp[i].second);
-                max_x = max(max_x, tmp[i].second);
-                i++;
-            }
-        }
-        
-        return max_capacity;
-    }
-    
     int divide(int _dividend, int _divisor) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -690,45 +662,6 @@ public:
         }
         
         return -1;
-    }
-    
-    int largestRectangleArea(vector<int> &height) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        int area = 0;
-        vector<pair<unsigned, unsigned> > candidates;
-        
-        for (int i=0; i<height.size(); i++)
-        {
-            unsigned start = i;
-            for (int k=0; k<candidates.size(); k++)
-            {
-                if (candidates[k].first <= height[i])
-                {
-                    int a = (i - candidates[k].second + 1)*candidates[k].first;
-                    if (a > area)
-                        area = a;
-                }
-                else
-                {
-                    start = candidates[k].second;
-                    candidates.erase(candidates.begin()+k, candidates.end());
-                    break;
-                }
-            }
-            
-            if (candidates.empty() || candidates.back().first < height[i])
-            {
-                candidates.push_back(make_pair(height[i], start));
-                
-                int a = (i - start + 1)*height[i];
-                if (a > area)
-                    area = a;
-            }
-        }
-        
-        return area;
     }
     
     int lengthOfLastWord(const char *s) {

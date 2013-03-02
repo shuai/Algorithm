@@ -99,9 +99,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "896"
-         endingLineNumber = "896"
-         landmarkName = "test_solution()"
-         landmarkType = "7">
+         endingLineNumber = "896">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
