@@ -66,10 +66,11 @@ extern void test_solution();
 extern int test_merge();
 extern void test_nqueen();
 extern void test_n_queen();
+extern void test_random();
+extern void test_concatenate();
 
 #include <memory>
 #include <queue>
-#include <unordered_set>
 
 int main(int argc, const char * argv[])
 {
@@ -82,12 +83,13 @@ int main(int argc, const char * argv[])
 //    test_expression();
 //
     
-    unordered_set<pair<int, int>> set;
+    test_concatenate();
     
     int a = 1;
     a <<= 0;
     cout << a << endl;
     
+
      //cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
 
 //    extern void test_serialization();

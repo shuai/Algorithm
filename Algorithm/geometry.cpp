@@ -133,13 +133,3 @@ void test_nearest_point()
     }
 }
 
-
-//void find_collear(vector<pair<int, int> >& points)
-//{
-//vector<pair<int, int> >& endPoints;
-//
-//for (size_t i=0; i<points.size(); i++) {
-//    endPoints
-//}
-//}
-

@@ -16,14 +16,6 @@ using namespace std;
 
 void sort_array(vector<unsigned>& array, unsigned& cost)
 {
-    cost = 0;
-    if (!array.size()) {
-        return;
-    }
-    
-    unsigned t[array.size()][2];
-    for (unsigned i=0; i<array.size(); i++) {
-        //<#statements#>
-    }
+
 }
 

@@ -154,89 +154,7 @@ public:
         
         return result;
     }
-//    ListNode *reverseKGroup(ListNode *head, int k) {
-//        // Start typing your C/C++ solution below
-//        // DO NOT write int main() function
-//        
-//        if (!head)
-//            return NULL;
-//        
-//        ListNode sentinel(0);
-//        sentinel.next = head;
-//        
-//        ListNode* prev = &sentinel, *current = head;
-//        
-//        while (current)
-//        {
-//            // reverse the maximum k length list starting from current
-//            ListNode* sub_tail = current, *sub_head = NULL;
-//            
-//            int count = 0;
-//            while (current && count < k)
-//            {
-//                ListNode* sub_next = current->next;
-//                current->next = sub_head;
-//                sub_head = current;
-//                current = sub_next;
-//                count ++;
-//            }
-//            
-//            if (count == k)
-//            {
-//                prev->next = sub_head;
-//                sub_tail->next = current;
-//                prev = sub_tail;
-//            }
-//            else
-//            {
-//                k = count;
-//                current = sub_head;
-//            }
-//        }
-//        return sentinel.next;
-//    }
-    
-    bool isScramble(string origin, string scramble) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         
-        if (origin.empty())
-            return true;
-        
-        // first, last, index_in_origin
-        bool dp[origin.size()][origin.size()][origin.size()];
-        
-        // initialize length 1 str
-        for (int i = 0; i < scramble.size(); i ++)
-            for (int k = 0; k < origin.size(); k++)
-                dp[i][i][k] = scramble[i] == origin[k];
-        
-        for (int len = 2; len <= origin.size(); len ++)
-        {
-            for (int start = 0; start <= origin.size() - len; start ++)
-            {
-                for (int index_origin = 0; index_origin <= origin.size() - len; index_origin ++)
-                {
-                    dp[start][start+len-1][index_origin] = false;
-                    for (int partition = start; partition < start + len - 1; partition ++)
-                    {
-                        if ((dp[start][partition][index_origin]
-                            && dp[partition+1][start+len-1][index_origin+partition-start+1]) ||
-                            (dp[start][partition][index_origin+len+start-partition-1]
-                            && dp[partition+1][start+len-1][index_origin])
-                            )
-                        {
-                            dp[start][start+len-1][index_origin] = true;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        
-        return dp[0][origin.size()-1][0];
-    }
-    
     vector<vector<int> > fourSum(vector<int> &num, int target) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -347,31 +265,6 @@ public:
         return longer;
     }
     
-//    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-//        // Start typing your C/C++ solution below
-//        // DO NOT write int main() function
-//        ListNode* tail = NULL, *head = NULL;
-//        bool carry = false;
-//        while (l1 || l2 || carry)
-//        {
-//            int value = (l1 ? l1->val : 0) + (l2 ? l2->val : 0) + (carry ? 1 : 0);
-//            carry = value > 9;
-//            if (carry)
-//                value -= 10;
-//            ListNode* node = new ListNode(value);
-//            if (tail)
-//                tail->next = node;
-//            tail = node;
-//            if (!head)
-//                head = tail;
-//            
-//            l1 = l1 ? l1->next : NULL;
-//            l2 = l2 ? l2->next : NULL;
-//        }
-//        
-//        return head;
-//    }
-    
     vector<string> anagrams(vector<string> &strs) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -448,55 +341,7 @@ public:
         }
     }
     
-    TreeNode2 *buildTree(vector<int> &inorder, vector<int> &postorder) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (inorder.empty() || postorder.empty())
-            return NULL;
-        
-        return buildTree(inorder, 0, inorder.size(), postorder, 0, postorder.size());
-    }
-    
-    TreeNode2 *buildTree(vector<int> &inorder, unsigned offset, unsigned count,
-                        vector<int> &postorder, unsigned offset2, unsigned count2) {
-        
-        int root = postorder[offset2+count2-1];
-        vector<int>::iterator pos = find(inorder.begin()+offset, inorder.begin()+offset+count,root);
-        unsigned left = pos-inorder.begin()-offset;
-        unsigned right = inorder.begin()+offset+count-pos-1;
-        
-        TreeNode2* node = new TreeNode2(root);
-        node->left = left ? buildTree(inorder, offset, left, postorder, offset2, left) : NULL;
-        if (right)
-            node->right = buildTree(inorder, offset+left+1, right, postorder, offset2+left, right);
-        return node;
-    }
-    
-    TreeNode2 *buildTree2(vector<int> &preorder, vector<int> &inorder) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        return NULL;
-        
-        if (preorder.empty() || inorder.empty())
-            return NULL;
-        return buildTree(preorder.begin(), preorder.end(), inorder.begin(), inorder.end());
-    }
-    
     typedef vector<int>::iterator ITERATOR;
-    
-    TreeNode2* buildTree(ITERATOR pre_start, ITERATOR pre_end, ITERATOR in_start, ITERATOR in_end)
-    {
-        int root_val = *pre_start;
-        ITERATOR it = find(in_start, in_end, root_val);
-        int left = it - in_start;
-        
-        TreeNode2* node = new TreeNode2(root_val);
-        if (left)
-            node->left = buildTree(pre_start+1, pre_start+1+left, in_start, it);
-        if (it+1 < in_end)
-            node->right = buildTree(pre_start+left+1, pre_end, it+1, in_end);
-        return node;
-    }
     
     int divide(int _dividend, int _divisor) {
         // Start typing your C/C++ solution below

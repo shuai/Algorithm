@@ -14,7 +14,7 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        unordered_map<string, vector<string>> dict_map;
+        map<string, vector<string>> dict_map;
         for (const string& str : dict) {
             for (int i=0; i<str.size(); i++) {
                 string tmp(str);
@@ -29,7 +29,7 @@ public:
         };
         
         // true: processed, false: explored
-        unordered_map<string, bool> seen;
+        map<string, bool> seen;
         list<Node> explored;
         explored.push_front(Node{start, 1});
         while (explored.size()) {

@@ -46,3 +46,29 @@ public:
         return intervals;
     }
 };
+
+class Solution2 {
+public:
+    vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
+        // Start typing your C/C++ solution below
+        // DO NOT write int main() function
+        
+        bool inserted = false;
+        vector<Interval> result;
+        for (auto interval : intervals) {
+            if (inserted || interval.end < newInterval.start)
+                result.push_back(interval);
+            else if (interval.start > newInterval.end) {
+                result.push_back(newInterval);
+                result.push_back(interval);
+                inserted = true;
+            } else {
+                newInterval.start = min(newInterval.start, interval.start);
+                newInterval.end = max(newInterval.end, interval.end);
+            }
+        }
+        if (!inserted)
+            result.push_back(newInterval);
+        return result;
+    }
+};

@@ -8,6 +8,7 @@
 
 #include "include.h"
 
+
 class Solution {
 public:
     ListNode *rotateRight(ListNode *head, int k) {
@@ -15,30 +16,35 @@ public:
         // DO NOT write int main() function
         
         if (!head)
+            return nullptr;
+        
+        ListNode* forward = nullptr;
+        while (true) {
+            int count = 0;
+            forward = head;
+            while (forward && count < k) {
+                count ++;
+                forward = forward->next;
+            }
+            
+            if (count <= k && !forward)
+                k %= count;
+            else
+                break;
+        }
+        
+        if (k == 0)
             return head;
         
-        ListNode* ptr1 = head, *ptr2 = head;
-        int len=0;
-        while (ptr1) {
-            len++;
-            ptr1 = ptr1->next;
+        ListNode* last = head;
+        while (forward->next) {
+            forward = forward->next;
+            last = last->next;
         }
         
-        ptr1 = head;
-        k %= len;
-        
-        while (k--) {
-            ptr2 = ptr2->next;
-        }
-        
-        while (ptr2 && ptr2->next) {
-            ptr1 = ptr1->next;
-            ptr2 = ptr2->next;
-        }
-        
-        ptr2->next = head;
-        head = ptr1->next;
-        ptr1->next = NULL;
+        forward->next = head;
+        head = last->next;
+        last->next = nullptr;
         return head;
     }
 };
