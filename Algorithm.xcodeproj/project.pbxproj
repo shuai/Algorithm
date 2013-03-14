@@ -71,6 +71,7 @@
 		06597B2716BE47B90052FB18 /* symmetric_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06597B2516BE47B90052FB18 /* symmetric_tree.cpp */; };
 		06597B2A16BE6BEF0052FB18 /* wildcard_match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06597B2816BE6BEF0052FB18 /* wildcard_match.cpp */; };
 		0672D14A1642BACA0090456A /* N-queen-2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0672D1481642BACA0090456A /* N-queen-2.cpp */; };
+		0674BE8216F215F1004F14F5 /* strstr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0674BE8016F215F1004F14F5 /* strstr.cpp */; };
 		067E112816E6C3C200D1C4B4 /* random_variable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 067E112616E6C3C200D1C4B4 /* random_variable.cpp */; };
 		067F1FCD16157E04000434DE /* bigfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 067F1FCB16157E04000434DE /* bigfile.cpp */; };
 		068342E016352CBF00965AE6 /* sorted_array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 068342DE16352CBF00965AE6 /* sorted_array.cpp */; };
@@ -208,6 +209,7 @@
 		06597B2516BE47B90052FB18 /* symmetric_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = symmetric_tree.cpp; sourceTree = "<group>"; };
 		06597B2816BE6BEF0052FB18 /* wildcard_match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wildcard_match.cpp; sourceTree = "<group>"; };
 		0672D1481642BACA0090456A /* N-queen-2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "N-queen-2.cpp"; sourceTree = "<group>"; };
+		0674BE8016F215F1004F14F5 /* strstr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = strstr.cpp; sourceTree = "<group>"; };
 		067E112616E6C3C200D1C4B4 /* random_variable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = random_variable.cpp; sourceTree = "<group>"; };
 		067F1FCB16157E04000434DE /* bigfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bigfile.cpp; sourceTree = "<group>"; };
 		068342DE16352CBF00965AE6 /* sorted_array.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sorted_array.cpp; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				06389C8C16EAF7C900FC3BF1 /* rotate_image.cpp */,
 				06389C8F16EAFC1100FC3BF1 /* spiral_matrix.cpp */,
 				06389C9016EAFC1100FC3BF1 /* spiral_matrix.h */,
+				0674BE8016F215F1004F14F5 /* strstr.cpp */,
 			);
 			name = Leetcode;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				06389C8B16EAE3E900FC3BF1 /* longest_valid_parenthesis.cpp in Sources */,
 				06389C8E16EAF7CA00FC3BF1 /* rotate_image.cpp in Sources */,
 				06389C9116EAFC1100FC3BF1 /* spiral_matrix.cpp in Sources */,
+				0674BE8216F215F1004F14F5 /* strstr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
