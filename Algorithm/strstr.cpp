@@ -20,15 +20,12 @@ public:
         
         int next[len];
         next[0] = -1;
-        if (len > 1)
-            next[1] = 0;
         
-        int pos = 2, c = 0;
+        int pos = 1, c = -1;
         while (pos < len) {
-            if (needle[c] == needle[pos-1]) {
-                c++;
-                next[pos++] = c;
-            } else if (c)
+            if (needle[pos-1] == needle[0])
+                next[pos++] = ++c;
+            else if (c)
                 c = next[c];
             else
                 next[pos++] = 0;
@@ -46,7 +43,6 @@ public:
             else
                 haystack++;
         }
-        
         return nullptr;
     }
 };
