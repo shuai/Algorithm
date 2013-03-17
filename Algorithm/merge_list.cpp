@@ -13,6 +13,7 @@
 #include <bitset>
 #include <queue>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -74,7 +75,7 @@ private:
             swap(store[i], store[parent(i)]);
             i = parent(i);
         }
-        
+                
         while (i < size)
         {
             int minimum = i;
@@ -96,96 +97,3 @@ private:
     unsigned size;
     unsigned capacity;
 };
-
-class Solution {
-public:
-    ListNode *mergeKLists(vector<ListNode *> &lists) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        ListNode* head = NULL;
-        ListNode* tail = NULL;
-        if (lists.empty())
-            return tail;
-        
-        heap h(lists.size());
-        
-        for (int i=0; i<lists.size(); i++)
-        {
-            if (lists[i])
-                h.insert(lists[i]);
-        }
-        
-        while (!h.empty())
-        {
-            ListNode* node = h.extract();
-            
-            if (tail)
-                tail->next = node;
-            if (!head)
-                head = node;
-            tail = node;
-            
-            if (node->next)
-                h.insert(node->next);
-        }
-        
-        return head;
-    }
-    
-    static string minWindow(string S, string T) {
-            // Start typing your C/C++ solution below
-            // DO NOT write int main() function
-            if (S.empty() || T.empty())
-                return "";
-            
-            int counter[255];
-            int negative = T.size();
-            memset(counter, 0, sizeof(counter));
-            for (int i=0; i<T.size(); i++)
-            {
-                counter[T[i]] --;
-            }
-            
-            int start = 0, count = INT_MAX, s = 0;
-            for (int i=0; i<S.size(); i++)
-            {
-                counter[S[i]] ++;
-                if (counter[S[i]] > 0)
-                {
-                    while (s < S.size() && counter[S[s]] > 0)
-                    {
-                        counter[S[s]] --;
-                        s++;
-                    }
-                }
-                else
-                {
-                    negative --;
-                }
-                
-                if (i-s+1 < count && negative == 0)
-                {
-                    count = i-s+1;
-                    start = s;
-                }
-            }
-            if (count == INT_MAX)
-                return "";
-            
-            return string(S.c_str() + start, count);
-        }
-    };
-
-int test_merge()
-{
-    ListNode* list = new ListNode(1);
-    list->next = new ListNode(2);
-    list->next->next = new ListNode(5);
-    
-    vector<ListNode*> v;
-    v.push_back(list);
-    
-    string ret = Solution::minWindow("ab", "b");
-    priority_queue<int> x;
-}

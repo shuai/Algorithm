@@ -110,50 +110,6 @@ public:
             last --;
         }
     }
-    
-    int threeSumClosest(vector<int> &num, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (num.size() < 3)
-            return -1;
-        
-        int result = 0;
-        bool result_set = false;
-        sort(num.begin(), num.end());
-        for (unsigned i=0; i<num.size()-2; i++)
-        {
-            if (i && num[i] == num[i-1])
-                continue;
-            // Fix a item and then do linear twoSum
-            unsigned first = i+1, last=num.size()-1;
-            while (first != last)
-            {
-                int sum = num[first]+num[last]+num[i];
-                if (sum == target)
-                    return target;
-                
-                if (!result_set || abs(sum-target) < abs(result-target))
-                    result = sum;
-                
-                result_set = true;
-                
-                if (sum > target)
-                {
-                    last --;
-                    while (num[last] == num[last+1] && last > first)
-                        last --;
-                }
-                else
-                {
-                    first ++;
-                    while (num[first] == num[first-1] && last > first)
-                        first ++;
-                }
-            }
-        }
-        
-        return result;
-    }
         
     vector<vector<int> > fourSum(vector<int> &num, int target) {
         // Start typing your C/C++ solution below
@@ -342,44 +298,7 @@ public:
     }
     
     typedef vector<int>::iterator ITERATOR;
-    
-    int divide(int _dividend, int _divisor) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        assert(_divisor);
         
-        long long dividend = _dividend;
-        long long divisor = _divisor;
-        
-        bool negative = (divisor < 0) != (dividend < 0);
-        if (dividend < 0)
-            dividend = -dividend;
-        if (divisor < 0)
-            divisor = -divisor;
-        
-        long long n = 0;
-        long long d = divisor;
-        long long c = 1;
-        while (dividend >= divisor)
-        {
-            while (d <= (dividend >> 1) )
-            {
-                d <<= 1;
-                c <<= 1;
-            }
-            
-            while (d > dividend)
-            {
-                d >>= 1;
-                c >>= 1;
-            }
-            
-            dividend -= d;
-            n += c;
-        }
-        return negative ? -n : n;
-    }
-    
     vector<string> generateParenthesis(int n) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -548,108 +467,8 @@ public:
         return len;
     }
     
-    double findMedianSortedArrays(int A[], int m, int B[], int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        if (m == 0 && n == 0)
-            return 0;
-        
-        int left, right;
-        if ((m + n)&1)
-        {
-            left = right = (m+n+1)/2;
-        }
-        else
-        {
-            left = (m+n)/2;
-            right = left + 1;
-        }
-        return (findKth(A,m,B,n,left) + findKth(A,m,B,n,right))/2;
-    }
-    
-    int findKth(int* A, int m, int* B, int n, int k)
-    {
-        if (m == 0)
-            return B[k-1];
-        if (n == 0)
-            return A[k-1];
-        
-        if (k == m + n)
-            return max(A[m-1], B[n-1]);
-        
-        int pivot_a = min(m-1, k/2);
-        int pivot_b = k - pivot_a - 1;
-        if (pivot_b > n - 1)
-        {
-            pivot_b = n - 1;
-            pivot_a = k - pivot_b - 1;
-        }
-        
-        int a_1 = pivot_a > 0 ? A[pivot_a - 1] : INT_MIN;
-        int b_1 = pivot_b > 0 ? B[pivot_b - 1] : INT_MIN;
-        
-        if (A[pivot_a] <= B[pivot_b] && A[pivot_a] >= b_1)
-            return A[pivot_a];
-        if (B[pivot_b] < A[pivot_a] && B[pivot_b] >= a_1)
-            return B[pivot_b];
-        
-        if (A[pivot_a] < B[pivot_b])
-        {
-            return findKth(A + pivot_a + 1, m - pivot_a - 1, B, pivot_b + 1, k - pivot_a - 1);
-        }
-        else
-        {
-            return findKth(B + pivot_b + 1, n - pivot_b - 1, A, pivot_a + 1, k - pivot_b - 1);
-        }
-    }
-    
 
 };
-
-void test_solution()
-{
-    Solution s;
-    vector<Interval> input;
-    input.push_back(Interval(1,5));
-    s.insert(input, Interval(6, 8));
-    
-    
-//    Solution s;
-//    vector<int> input;
-//    input.push_back(0);
-//    input.push_back(0);
-//    input.push_back(0);
-//    input.push_back(0);
-//    vector<vector<int> > result = s.fourSum(input, 2);
-//    
-//    string x = s.addBinary("1", "111");
-//    
-//    vector<int> input2;
-//    input2.push_back(7);
-//    input2.push_back(3);
-//    input2.push_back(2);
-    
-//    vector<vector<int> > ret = s.combinationSum(input2, 18);
-//    
-//    int A[] = {1,1000};
-//    int num = s.firstMissingPositive(A, 2);
-//    cout << num << endl;
-//    
-//    TreeNode2 t1(1);
-//    TreeNode2 t2(2);
-//    t1.left = &t2;
-//    
-//    s.flatten(&t1);
-//    
-//    vector<int> xx;
-//    xx.insert(xx.begin(), 0);
-//    cout << xx.size() << endl;
-    
-    int A[] = {1};
-    int B[] = {2,3};
-    double r = s.findMedianSortedArrays(A, 1, B, 2);
-}
 
 void sort_list(list<pair<string, string> >& str_list)
 {

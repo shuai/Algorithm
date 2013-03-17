@@ -12,24 +12,12 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        if (*p == 0)
-            return *s == 0;
-        
-        if (*s == 0) {
-            if (*(p+1) != '*')
-                return false;
-            return isMatch(s, p+2);
-        }
-        
-        if (p[1] == '*') {
-            if (p[0] == '.' || p[0] == s[0])
-                return isMatch(s+1, p) || isMatch(s, p+2);
-            return isMatch(s, p+2);
-        }
-        
-        if (p[0] != '.' && p[0] != s[0])
-            return false;
-        
-        return isMatch(s+1, p+1);
+        if (!*p)
+            return !*s;
+        if (p[1] == '*')
+            return isMatch(s, p+2) || (*p == '.' && *s || *s == *p) && isMatch(s+1, p);
+        if (*p == '.')
+            return *s && isMatch(s+1, p+1);
+        return *s == *p && isMatch(s+1, p+1);
     }
 };

@@ -71,6 +71,7 @@ extern void test_concatenate();
 
 #include <memory>
 #include <queue>
+#include <cmath>
 
 int main(int argc, const char * argv[])
 {
@@ -83,15 +84,6 @@ int main(int argc, const char * argv[])
 //    test_expression();
 //
     
-    test_concatenate();
-    
-    int a = 1;
-    a <<= 0;
-    cout << a << endl;
-    
-
-     //cout << (-11)%10 <<  1%(-10) << 11%-10 << endl;
-
 //    extern void test_serialization();
 //    test_serialization();
     

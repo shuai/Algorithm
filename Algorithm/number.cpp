@@ -225,45 +225,6 @@ void test_log2()
     }
 }
 
-
-
-unsigned mydivision(unsigned divident, unsigned divisor)
-{
-    if (!divisor) {
-        return ~0u;
-    }
-    
-    unsigned result = 0;
-    unsigned factor = divisor;
-    unsigned times = 1;
-    
-    while (divident > divisor) {
-        if (divident >= factor) {
-            divident -= factor;
-            result += times;
-            factor <<= 1;
-            times <<= 1;
-        }
-        else
-        {
-            factor >>= 1;
-            times >>= 1;
-            assert(times);
-        }
-    }
-    
-    return result;
-}
-
-void test_mydivision()
-{
-    for (int i=0; i<10; i++) {
-        unsigned divident = rand()%100000;
-        unsigned divisor = rand()%10;
-        cout << divident << "/" << divisor << " = " << mydivision(divident, divisor) << " -> " << divident/divisor << endl;
-    }
-}
-
 unsigned modular_exponentiation(unsigned base, unsigned exponent, unsigned modulus)
 {
     unsigned e = 0;

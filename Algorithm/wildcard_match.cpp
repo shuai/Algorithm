@@ -8,6 +8,25 @@
 
 #include "include.h"
 
+class SolutionRecursive {
+public:
+    bool isMatch(const char *s, const char *p) {
+        // Start typing your C/C++ solution below
+        // DO NOT write int main() function
+        
+        if (!*p)
+            return !*s;
+        
+        if (*p == '*')
+            return *s && isMatch(s+1, p) || isMatch(s, p+1);
+        
+        if (*p == '?')
+            return *s && isMatch(s+1, p+1);
+        
+        return *s == *p && isMatch(s+1, p+1);
+    }
+};
+
 class Solution {
 public:
     bool isMatch(const char *s, const char *p) {

@@ -18,16 +18,14 @@ public:
         
         for (int i=0; i<path.size(); i++) {
             if (path[i] == '.') {
-                if (i != path.size()-1){
-                    if (path[i+1] == '.') {
-                        i++;
-                        if (result.size() > 1 && result.back() == '/')
-                            result.pop_back();
-                        while (result.size() && result.back() != '/')
-                            result.pop_back();
-                    } else if (path[i+1] != '/')
-                        result.push_back('.');
-                }
+                if (path[i+1] == '.') {
+                    i++;
+                    if (result.size() > 1 && result.back() == '/')
+                        result.pop_back();
+                    while (result.size() && result.back() != '/')
+                        result.pop_back();
+                } else if (path[i+1] && path[i+1] != '/')
+                    result.push_back('.');
                 continue;
             }
             

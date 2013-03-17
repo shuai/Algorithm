@@ -18,9 +18,7 @@ public:
         if (!len)
             return haystack;
         
-        int next[len];
-        next[0] = -1;
-        
+        int next[len];        
         int pos = 1, c = -1;
         while (pos < len) {
             if (needle[pos-1] == needle[0])
