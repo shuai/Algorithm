@@ -14,11 +14,11 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        int insert = 2, pos = 2;
-        for (;pos<n; pos++) {
-            if (A[pos] != A[insert-2])
-                A[insert++] = A[pos];
+        int pos = 0;
+        for (int i=0; i<n; i++) {
+            if (pos < 2 || A[pos-2] != A[i])
+                A[pos++] = A[i];
         }
-        return min(n, insert);
+        return pos;
     }
 };

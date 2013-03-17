@@ -14,16 +14,15 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        int current = 0, insert0 = 0, insert1 = 0;
-        while (current < n) {
-            if (A[current] == 0) {
-                swap(A[current], A[insert0++]);
-                insert1 = max(insert1, insert0);
+        int* p0 = A, *p2 = A+n-1, *p = A;
+        while (p <= p2) {
+            if (*p == 2) {
+                swap(*p2--, *p);
+                continue;
             }
-            
-            if (A[current] == 1)
-                swap(A[current], A[insert1++]);
-            current ++;
+            if (*p == 0)
+                swap(*p0++, *p);
+            p++;
         }
     }
 };

@@ -14,28 +14,23 @@ public:
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
         
-        ListNode sentinel(0), *prev = &sentinel, *start = head, *end = head;
+        ListNode sentinel(0), *prev = &sentinel;
         sentinel.next = head;
         
-        while (end) {
-            if (end->val == start->val)
-                end = end->next;
-            
-            if (!end || end->val != start->val) {
-                if (start->next != end) {
-                    prev->next = end;
-                    while (start != end) {
-                        ListNode* next = start->next;
-                        delete start;
-                        start = next;
-                    }
-                } else {
-                    prev = start;
-                    start = end;
+        while (head) {
+            if (head->next && head->val == head->next->val) {
+                int val = head->val;
+                while (head && head->val == val) {
+                    ListNode* next = head->next;
+                    delete head;
+                    head = next;
                 }
+                prev->next = head;
+            } else {
+                prev = head;
+                head = head->next;
             }
         }
-        
         return sentinel.next;
     }
 };

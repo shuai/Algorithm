@@ -42,6 +42,11 @@
 		063A490B16F565A500AB2F07 /* letter_combination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A490916F565A400AB2F07 /* letter_combination.cpp */; };
 		063A490E16F5738600AB2F07 /* divide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A490C16F5738500AB2F07 /* divide.cpp */; };
 		063A491116F57E7200AB2F07 /* substring_concatenation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A490F16F57E7100AB2F07 /* substring_concatenation.cpp */; };
+		063A491416F58E9500AB2F07 /* next_permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A491216F58E9500AB2F07 /* next_permutation.cpp */; };
+		063A491716F5936B00AB2F07 /* search_for_range.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A491516F5936A00AB2F07 /* search_for_range.cpp */; };
+		063A491A16F5A0AD00AB2F07 /* combination_sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A491816F5A0AD00AB2F07 /* combination_sum.cpp */; };
+		063A491D16F5A26000AB2F07 /* combination_sum_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A491B16F5A26000AB2F07 /* combination_sum_2.cpp */; };
+		063A492016F5A85700AB2F07 /* find_missing_positive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 063A491E16F5A85600AB2F07 /* find_missing_positive.cpp */; };
 		064AD5BA15FDC9B400287405 /* bitmanipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 064AD5B815FDC9B400287405 /* bitmanipulation.cpp */; };
 		064AD5C215FE389900287405 /* permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 064AD5C015FE389900287405 /* permutation.cpp */; };
 		064B79AB15D4088B0028E4FC /* tree_traversal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 064B79A915D4088B0028E4FC /* tree_traversal.cpp */; };
@@ -102,6 +107,9 @@
 		06AD6CE016418BBE00C62E63 /* N-queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06AD6CDE16418BBE00C62E63 /* N-queen.cpp */; };
 		06B27933160DA7ED0017735F /* multithreading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B27931160DA7ED0017735F /* multithreading.cpp */; };
 		06B5E87516231055004CA4D7 /* testcase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06B5E87316231055004CA4D7 /* testcase.cpp */; };
+		06BCA40616F5B97A007D0546 /* maximum_subarray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06BCA40416F5B97A007D0546 /* maximum_subarray.cpp */; };
+		06BCA40916F5C161007D0546 /* search_2d_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06BCA40716F5C161007D0546 /* search_2d_matrix.cpp */; };
+		06BCA40C16F5D98A007D0546 /* maximum_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06BCA40A16F5D98A007D0546 /* maximum_rectangle.cpp */; };
 		06C592F016109B9D0001CEE3 /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C592EE16109B9D0001CEE3 /* tree.cpp */; };
 		06C5A64D15E8FF2C003371DD /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06C5A64B15E8FF2C003371DD /* graph.cpp */; };
 		06D0F4DC16C50EDA005D0AAD /* egg_floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06D0F4DA16C50EDA005D0AAD /* egg_floor.cpp */; };
@@ -184,6 +192,11 @@
 		063A490916F565A400AB2F07 /* letter_combination.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = letter_combination.cpp; sourceTree = "<group>"; };
 		063A490C16F5738500AB2F07 /* divide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = divide.cpp; sourceTree = "<group>"; };
 		063A490F16F57E7100AB2F07 /* substring_concatenation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = substring_concatenation.cpp; sourceTree = "<group>"; };
+		063A491216F58E9500AB2F07 /* next_permutation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = next_permutation.cpp; sourceTree = "<group>"; };
+		063A491516F5936A00AB2F07 /* search_for_range.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = search_for_range.cpp; sourceTree = "<group>"; };
+		063A491816F5A0AD00AB2F07 /* combination_sum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = combination_sum.cpp; sourceTree = "<group>"; };
+		063A491B16F5A26000AB2F07 /* combination_sum_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = combination_sum_2.cpp; sourceTree = "<group>"; };
+		063A491E16F5A85600AB2F07 /* find_missing_positive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = find_missing_positive.cpp; sourceTree = "<group>"; };
 		064AD5B815FDC9B400287405 /* bitmanipulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmanipulation.cpp; sourceTree = "<group>"; };
 		064AD5C015FE389900287405 /* permutation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = permutation.cpp; sourceTree = "<group>"; };
 		064B79A915D4088B0028E4FC /* tree_traversal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tree_traversal.cpp; sourceTree = "<group>"; };
@@ -247,6 +260,9 @@
 		06B27931160DA7ED0017735F /* multithreading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = multithreading.cpp; sourceTree = "<group>"; };
 		06B5E87316231055004CA4D7 /* testcase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testcase.cpp; sourceTree = "<group>"; };
 		06B9853C15DF81E2002D95A4 /* layout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = layout.txt; sourceTree = "<group>"; };
+		06BCA40416F5B97A007D0546 /* maximum_subarray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = maximum_subarray.cpp; sourceTree = "<group>"; };
+		06BCA40716F5C161007D0546 /* search_2d_matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = search_2d_matrix.cpp; sourceTree = "<group>"; };
+		06BCA40A16F5D98A007D0546 /* maximum_rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = maximum_rectangle.cpp; sourceTree = "<group>"; };
 		06C592EE16109B9D0001CEE3 /* tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
 		06C5A64B15E8FF2C003371DD /* graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graph.cpp; sourceTree = "<group>"; };
 		06D0F4DA16C50EDA005D0AAD /* egg_floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = egg_floor.cpp; sourceTree = "<group>"; };
@@ -448,6 +464,14 @@
 				063A490916F565A400AB2F07 /* letter_combination.cpp */,
 				063A490C16F5738500AB2F07 /* divide.cpp */,
 				063A490F16F57E7100AB2F07 /* substring_concatenation.cpp */,
+				063A491216F58E9500AB2F07 /* next_permutation.cpp */,
+				063A491516F5936A00AB2F07 /* search_for_range.cpp */,
+				063A491816F5A0AD00AB2F07 /* combination_sum.cpp */,
+				063A491B16F5A26000AB2F07 /* combination_sum_2.cpp */,
+				063A491E16F5A85600AB2F07 /* find_missing_positive.cpp */,
+				06BCA40416F5B97A007D0546 /* maximum_subarray.cpp */,
+				06BCA40716F5C161007D0546 /* search_2d_matrix.cpp */,
+				06BCA40A16F5D98A007D0546 /* maximum_rectangle.cpp */,
 			);
 			name = Leetcode;
 			sourceTree = "<group>";
@@ -659,6 +683,14 @@
 				063A490B16F565A500AB2F07 /* letter_combination.cpp in Sources */,
 				063A490E16F5738600AB2F07 /* divide.cpp in Sources */,
 				063A491116F57E7200AB2F07 /* substring_concatenation.cpp in Sources */,
+				063A491416F58E9500AB2F07 /* next_permutation.cpp in Sources */,
+				063A491716F5936B00AB2F07 /* search_for_range.cpp in Sources */,
+				063A491A16F5A0AD00AB2F07 /* combination_sum.cpp in Sources */,
+				063A491D16F5A26000AB2F07 /* combination_sum_2.cpp in Sources */,
+				063A492016F5A85700AB2F07 /* find_missing_positive.cpp in Sources */,
+				06BCA40616F5B97A007D0546 /* maximum_subarray.cpp in Sources */,
+				06BCA40916F5C161007D0546 /* search_2d_matrix.cpp in Sources */,
+				06BCA40C16F5D98A007D0546 /* maximum_rectangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

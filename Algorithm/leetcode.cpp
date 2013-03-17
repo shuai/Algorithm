@@ -79,38 +79,6 @@ public:
         return result;
     }
     
-    void nextPermutation(vector<int> &num) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        if (num.empty())
-            return;
-        
-        int max = INT_MIN;
-        int index = num.size() - 1;
-        while (index >= 0 && num[index] >= max)
-        {
-            max = num[index];
-            index --;
-        }
-        
-        if (index != -1)
-        {
-            int bigger = index + 1;
-            while (bigger + 1 < num.size() && num[bigger+1] > num[index])
-                bigger ++;
-            swap(num[index], num[bigger]);
-        }
-        
-        int first = index + 1, last = num.size() - 1;
-        while (first < last)
-        {
-            swap(num[first], num[last]);
-            first ++;
-            last --;
-        }
-    }
-        
     vector<vector<int> > fourSum(vector<int> &num, int target) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
@@ -259,44 +227,6 @@ public:
     }
     
     
-    vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        vector<int> selected;
-        vector<vector<int> > output;
-        
-        sort(candidates.begin(), candidates.end());
-        
-        combinationSumInternal(output, selected, candidates, 0, target);
-        return output;
-    }
-    
-    void combinationSumInternal(vector<vector<int> >& output, vector<int>& selected,
-                                vector<int> &candidates, unsigned offset, int target) {
-        for (unsigned i=offset; i<candidates.size(); i++)
-        {
-            if (i>offset && candidates[i] == candidates[i-1])
-                continue;
-            
-            unsigned count = 0;
-            
-            do {
-                count++;
-                selected.push_back(candidates[i]);
-                target -= candidates[i];
-                
-                if (target == 0)
-                    output.push_back(selected);
-                else if (target > candidates[i])
-                    combinationSumInternal(output, selected, candidates, i+1, target);
-            } while (target >= candidates[i]);
-            
-            target += count*candidates[i];
-            
-            selected.erase(selected.begin() + selected.size() - count, selected.end());
-        }
-    }
-    
     typedef vector<int>::iterator ITERATOR;
         
     vector<string> generateParenthesis(int n) {
@@ -427,46 +357,7 @@ public:
         
         return -1;
     }
-    
-    int lengthOfLastWord(const char *s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        
-        int len = 0;
-        
-        
-        if (s)
-        {
-            const char* last_space = s;
-            const char* space = NULL;
-            while (*s)
-            {
-                if (*s == ' ')
-                {
-                    if (!space)
-                    {
-                        len = s - last_space;
-                        last_space = NULL;
-                    }
-                    space = s;
-                }
-                else
-                {
-                    if (!last_space)
-                        last_space = s;
-                    
-                    space = NULL;
-                }
-                s++;
-            }
-            
-            
-            if (!space && last_space)
-                len = s - last_space;
-        }
-        return len;
-    }
-    
+
 
 };
 
